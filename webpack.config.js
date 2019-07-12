@@ -13,7 +13,8 @@ function generateConfig(name) {
       libraryTarget: 'umd'
     },
     node: {
-      process: false
+      process: false,
+      Buffer: false
     },
     devtool: 'cheap-module-source-map'
   };
