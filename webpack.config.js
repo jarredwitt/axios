@@ -15,7 +15,7 @@ function generateConfig(name) {
     node: {
       process: false
     },
-    devtool: 'source-map'
+    devtool: 'cheap-module-source-map'
   };
 
   config.plugins = [
@@ -37,7 +37,7 @@ function generateConfig(name) {
   return config;
 }
 
-['axios', 'axios.min'].forEach(function (key) {
+['axios', 'axios.min'].forEach(function(key) {
   config[key] = generateConfig(key);
 });
 
